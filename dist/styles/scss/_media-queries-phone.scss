@@ -1,0 +1,337 @@
+@media only screen and (max-width: 480px) {
+    nav {
+        .mobile-nav-icon {
+            left: 80%;
+        }
+    }
+    .balloon_container {
+        .balloon {
+            width: 80px;
+            left: 70%;
+            top: 200px;
+        }
+    }
+    .arrow_box {
+        display: none !important;
+    }
+    .guide {
+        top: 53px;
+        h1 {
+            font-size: 6em;
+        }
+    }
+    .section_2 {
+        height: 580px;
+        h1 {
+            top: 10px;
+        }
+        h3 {
+            font-size: 1em;
+            position: relative;
+            bottom: 5px;
+            font-weight: 500;
+        }
+        .language {
+            position: relative;
+            top: -170px;
+            .slider {
+                height: 30px;
+            }
+            .html {
+                top: 220px;
+            }
+            .css {
+                top: 260px;
+            }
+            .jquery {
+                top: 300px;
+            }
+            .javascript {
+                top: 340px;
+            }
+            .php {
+                top: 380px;
+            }
+            .chart-y1 {
+                h3 {
+                    bottom: 85.6%;
+                }
+            }
+            .chart-y {
+                height: 440px;
+            }
+            .chart-x {
+                top: 580px;
+            }
+        }
+    }
+    .section_3 {
+        height: 530px;
+        h1 {
+            font-size: 3.4em;
+        }
+        .chart-x1 {
+            top: 440px;
+        }
+        .chart-x2 {
+            top: 370px;
+        }
+        .chart-x3 {
+            top: 300px;
+        }
+        .chart-x4 {
+            top: 230px;
+        }
+        .bar_container {
+            h3 {
+                font-size: 1.2em;
+                top: 640px;
+            }
+            .bar {
+                width: 30px;
+            }
+            .label {
+                top: 440px;
+                font-weight: 500;
+            }
+            .i-label {
+                left: 34%;
+            }
+            .f-label {
+                left: 16%;
+            }
+            .p-label {
+                left: 61%;
+            }
+            .flash {
+                left: 18%;
+                top: 340px;
+            }
+            .illustrator {
+                left: 41%;
+                height: 200px;
+                top: 140px;
+            }
+            .photoshop {
+                left: 67%;
+                height: 250px;
+                top: -110px;
+            }
+        }
+    }
+    .section_4 {
+        height: 600px;
+        .action-button {
+            top: 85px;
+            font-size: 0.6em;
+            padding: 2.5px 20px 2.5px 10px;
+        }
+        .drag-me {
+            left: 65%;
+            display: none;
+        }
+        .player {
+            left: 10%;
+            position: absolute;
+            font-size: 3em;
+            top: 5%;
+            left: 10%;
+            width: 0;
+        }
+        .playerContainer {
+            top: 108px;
+            right: 28px;
+            bottom: 0;
+        }
+        .pointer {
+            display: none;
+        }
+        .answer {
+            height: 200px;
+            h2 {
+                top: 80%;
+                font-size: 1em;
+            }
+        }
+        .board {
+            height: 300px;
+            h1 {
+                font-size: 2em;
+            }
+            .lets-play {
+                font-size: 1.7em;
+                top: 48%;
+            }
+            h2 {
+                font-size: 0.8em;
+                top: 51%;
+                font-weight: 600;
+            }
+            .square-piece {
+                i {
+                    font-size: 3em;
+                    top: 13%;
+                }
+                .ion-ios-arrow-thin-right {
+                    top: 38%;
+                }
+                h1 {
+                    font-size: 1.8em;
+                }
+                .go {
+                    font-size: 2.2em;
+                }
+                h2 {
+                    font-size: 1.8em;
+                }
+            }
+            piece-1 {
+                i {
+                    width: 100%;
+                    text-align: center;
+                }
+            }
+            .top-row {}
+            .bottom-row {}
+            .piece-11 {
+                h1 {
+                    font-size: 4em;
+                }
+            }
+        }
+    }
+    .contact-main {
+        height: 1000px;
+        form {
+            width: 300px;
+        }
+        .details {
+            width: 50%;
+        }
+        .social-circles {
+            top: 80px;
+            >div {
+                width: 80px;
+                height: 80px;
+                line-height: 93px;
+                a {
+                    font-size: 3.8em;
+                }
+            }
+        }
+    }
+    //about page
+    .cloud {
+        display: none;
+    }
+    article {
+        width: 100%;
+        p {
+            font-weight: 500;
+        }
+    }
+    #fe {
+        top: -105px;
+    }
+    #practical {
+        top: 321px;
+    }
+    #ux {
+        top: 761px;
+    }
+    #userExperience {
+        top: 1075px;
+    }
+    #design-container {
+        top: 1727px;
+    }
+    #connected {
+        font-size: 19em;
+        top: 0;
+    }
+    .timeline footer {
+        top: 2997px;
+    }
+    #content article {
+        margin-left: -47%;
+    }
+    //Portfolio Page
+    .portfolio-wrapper {
+        .stack-container {
+            width: 300px;
+            height: 490px;
+        }
+        .active-stack-container {
+            width: 300px;
+        }
+        .card {
+            width: 300px;
+            height: 440px;
+        }
+        .back-active {
+            width: 300px;
+            height: 414px;
+            display: none;
+        }
+        .back iframe {
+            display: none;
+        }
+        .active-stack-container {
+            height: 510px;
+        }
+        .back .active-frame {
+            width: 300px;
+        }
+        .stack-container .close-container {
+            width: 30px;
+            height: 30px;
+            left: 92.73%;
+            top: 11.5%;
+            ;
+            position: fixed;
+            left: 89.73%;
+        }
+        .stack-container .card-closer {
+            top: 2px;
+            font-size: 1.4em;
+            z-index: 997;
+        }
+    }
+    .image-container {
+        display: none;
+    }
+    .main-view img {
+        height: auto;
+        width: 100%;
+        position: fixed;
+        top: 20%;
+    }
+    .controls {
+        display: none;
+    }
+    .portfolio-title-container .mobileOnly {
+        display: block;
+        font-size: 3em;
+        color: #FFB000;
+        margin-top: 20px;
+        margin-bottom: 0;
+        font-weight: 800;
+    }
+    .col {
+        margin: 1% 0 1% 0%;
+    }
+    .span_1_of_12,
+    .span_2_of_12,
+    .span_3_of_12,
+    .span_4_of_12,
+    .span_5_of_12,
+    .span_6_of_12,
+    .span_7_of_12,
+    .span_8_of_12,
+    .span_9_of_12,
+    .span_10_of_12,
+    .span_11_of_12,
+    .span_12_of_12 {
+        width: 100%;
+    }
+}
