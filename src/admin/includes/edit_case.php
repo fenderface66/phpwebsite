@@ -20,7 +20,9 @@ while($row = mysqli_fetch_assoc($select_cases_by_id)) {
 	$case_image_two = $row['case_image_two']; 
 	$case_image_three = $row['case_image_three']; 
 	$case_image_four = $row['case_image_four']; 
-   
+	$case_image_five = $row['case_image_five']; 
+	$case_image_six = $row['case_image_six']; 
+
 
 }
 
@@ -35,28 +37,80 @@ if (isset($_POST['edit_case'])) {
 
 	$case_image_two = $_FILES['case_image_two']['name'];
 	$case_image_two_temp = $_FILES['case_image_two']['tmp_name'];
-	
+
 	$case_image_three = $_FILES['case_image_three']['name'];
 	$case_image_three_temp = $_FILES['case_image_three']['tmp_name'];
-	
+
 	$case_image_four = $_FILES['case_image_four']['name'];
 	$case_image_four_temp = $_FILES['case_image_four']['tmp_name'];
+
+	$case_image_five = $_FILES['case_image_five']['name'];
+	$case_image_five_temp = $_FILES['case_image_five']['tmp_name'];
+
+	$case_image_six = $_FILES['case_image_six']['name'];
+	$case_image_six_temp = $_FILES['case_image_six']['tmp_name'];
 
 	move_uploaded_file($case_image_one_temp, "../img/$case_image_one" );
 	move_uploaded_file($case_image_two_temp, "../img/$case_image_two" );
 	move_uploaded_file($case_image_three_temp, "../img/$case_image_three" );
 	move_uploaded_file($case_image_four_temp, "../img/$case_image_four" );
+	move_uploaded_file($case_image_five_temp, "../img/$case_image_five" );
+	move_uploaded_file($case_image_six_temp, "../img/$case_image_six" );
 
 	if (empty($case_image_one)) {
 		$query = "SELECT * FROM case_studies WHERE case_id = $case_id ";
 		$select_image = mysqli_query($connection, $query);
 		while ($row = mysqli_fetch_array($select_image)) {
-			$case_image_one = $row['case_image_one']; 
+			$case_image_one = $row['case_image_one'];   
+		}
+	} 
+
+	if (empty($case_image_two)) {
+		$query = "SELECT * FROM case_studies WHERE case_id = $case_id ";
+		$select_image = mysqli_query($connection, $query);
+		while ($row = mysqli_fetch_array($select_image)) { 
 			$case_image_two = $row['case_image_two']; 
-			$case_image_three = $row['case_image_three']; 
+		}
+	} 
+
+	if (empty($case_image_three)) {
+		$query = "SELECT * FROM case_studies WHERE case_id = $case_id ";
+		$select_image = mysqli_query($connection, $query);
+		while ($row = mysqli_fetch_array($select_image)) {
+			$case_image_three = $row['case_image_three'];  
+		}
+	} 
+
+	if (empty($case_image_four)) {
+		$query = "SELECT * FROM case_studies WHERE case_id = $case_id ";
+		$select_image = mysqli_query($connection, $query);
+		while ($row = mysqli_fetch_array($select_image)) {
 			$case_image_four = $row['case_image_four'];    
 		}
-	}
+
+
+	} 
+
+	if (empty($case_image_five)) {
+		$query = "SELECT * FROM case_studies WHERE case_id = $case_id ";
+		$select_image = mysqli_query($connection, $query);
+		while ($row = mysqli_fetch_array($select_image)) {
+			$case_image_five = $row['case_image_five'];    
+		}
+
+	} 
+
+	if (empty($case_image_six)) {
+		$query = "SELECT * FROM case_studies WHERE case_id = $case_id ";
+		$select_image = mysqli_query($connection, $query);
+		while ($row = mysqli_fetch_array($select_image)) {
+			$case_image_six = $row['case_image_six'];    
+		}
+
+
+	} 
+
+
 
 	$query = "UPDATE case_studies SET ";
 	$query .= "case_name = '{$case_name}', ";
@@ -66,13 +120,15 @@ if (isset($_POST['edit_case'])) {
 	$query .= "case_image_one = '{$case_image_one}', ";
 	$query .= "case_image_two = '{$case_image_two}', ";
 	$query .= "case_image_three = '{$case_image_three}', ";
-	$query .= "case_image_four = '{$case_image_four}' ";
+	$query .= "case_image_four = '{$case_image_four}', ";
+	$query .= "case_image_five = '{$case_image_five}', ";
+	$query .= "case_image_six = '{$case_image_six}' ";
 	$query .= "WHERE case_id = {$case_id} ";
 
 	$edit_case_query = mysqli_query($connection, $query);
 	confirm($edit_case_query);
-
-}
+	header("Location: ./case_studies.php?source=view_all_cases");
+} 
 
 ?>
 
@@ -103,17 +159,30 @@ if (isset($_POST['edit_case'])) {
 		<input name="case_image_one" class="form-control" type="file">
 	</div>
 	<div class="form-group">
-		<label for="case_image_two">Scroll Image</label>
+		<label for="case_image_two">Gallery 1</label>
 		<img width="100" src="../img/<?php echo $case_image_two ?>"/> 
 		<input name="case_image_two" class="form-control" type="file">
 	</div>
 	<div class="form-group">
+		<label for="case_image_three">Gallery 2</label>
 		<img width="100" src="../img/<?php echo $case_image_three ?>"/> 
 		<input name="case_image_three" class="form-control" type="file">
 	</div>
 	<div class="form-group">
+		<label for="case_image_four">Gallery 3</label>
 		<img width="100" src="../img/<?php echo $case_image_four ?>"/> 
 		<input name="case_image_four" class="form-control" type="file">
+	</div>
+	<div class="form-group">
+		<label for="case_image_five">Gallery 4</label>
+		<img width="100" src="../img/<?php echo $case_image_five ?>"/> 
+		<input name="case_image_five" class="form-control" type="file">
+	</div>
+	
+	<div class="form-group">
+		<label for="case_image_six">Gallery </label>
+		<img width="100" src="../img/<?php echo $case_image_six ?>"/> 
+		<input name="case_image_six" class="form-control" type="file">
 	</div>
 
 	<div class="form-group">

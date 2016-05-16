@@ -10,6 +10,8 @@
       <th>Image Two</th>
       <th>Image Three</th>
       <th>Image Four</th>
+      <th>Image Five</th>
+      <th>Image six</th>
     </tr>
   </thead>
 

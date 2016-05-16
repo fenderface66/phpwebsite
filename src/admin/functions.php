@@ -32,19 +32,27 @@ function add_case() {
 		
 		$case_image_four = $_FILES['case_image_four']['name'];
     $case_image_four_temp = $_FILES['case_image_four']['tmp_name'];
+		
+		$case_image_four = $_FILES['case_image_five']['name'];
+    $case_image_four_temp = $_FILES['case_image_five']['tmp_name'];
+		
+		$case_image_four = $_FILES['case_image_six']['name'];
+    $case_image_four_temp = $_FILES['case_image_six']['tmp_name'];
 
 
     move_uploaded_file($case_image_one_temp, "../images/$case_image_one" );
 		move_uploaded_file($case_image_two_temp, "../images/$case_image_two_temp" );
 		move_uploaded_file($case_image_three_temp, "../images/$case_image_three_temp" );
 		move_uploaded_file($case_image_four_temp, "../images/$case_image_four_temp" );
+		move_uploaded_file($case_image_five_temp, "../images/$case_image_five_temp" );
+		move_uploaded_file($case_image_six_temp, "../images/$case_image_six_temp" );
 		
 
 
     $query = 
-      "INSERT INTO case_studies(case_name, case_client, case_description, case_link , case_image_one, case_image_two, case_image_three, case_image_four) ";
+      "INSERT INTO case_studies(case_name, case_client, case_description, case_link , case_image_one, case_image_two, case_image_three, case_image_four, case_image_five, case_image_six) ";
     $query .= 
-      "VALUES('{$case_name}','{$case_client}','{$case_description}','{$case_link}','{$case_image_one}','{$case_image_two}', '{$case_image_three}','{$case_image_four}' ) ";
+      "VALUES('{$case_name}','{$case_client}','{$case_description}','{$case_link}','{$case_image_one}','{$case_image_two}', '{$case_image_three}','{$case_image_four}','{$case_image_five}','{$case_image_six}' ) ";
 
     $create_case_query = mysqli_query($connection, $query);
 
@@ -145,6 +153,8 @@ function find_cases() {
 		$case_image_two = $row['case_image_two']; 
 		$case_image_three = $row['case_image_three']; 
 		$case_image_four = $row['case_image_four'];   
+		$case_image_five = $row['case_image_five'];   
+		$case_image_six = $row['case_image_six'];   
 
     echo "<tr>";
     echo "<td>{$case_id}</td>";
@@ -156,6 +166,8 @@ function find_cases() {
 		echo "<td><img width='100px' src='../img/$case_image_two' alt='image'></td>";
 		echo "<td><img width='100px' src='../img/$case_image_three' alt='image'></td>";
 		echo "<td><img width='100px' src='../img/$case_image_four' alt='image'></td>";
+		echo "<td><img width='100px' src='../img/$case_image_five' alt='image'></td>";
+		echo "<td><img width='100px' src='../img/$case_image_six' alt='image'></td>";
     echo "<td><a href='case_studies.php?delete={$case_id}'>Delete</a></td>";
     echo "<td><a href='case_studies.php?source=edit_case&c_id={$case_id}'>Edit</a></td>";
     echo "</tr>";  

@@ -40,7 +40,7 @@ nav {
 			height: 80px;
 			line-height: 76px;
 			width: auto;
-			transition: 0.5s;
+			transition: 0.3s;
 			cursor: pointer;
 			min-width: 110px;
 			padding: 0;
@@ -48,45 +48,74 @@ nav {
 	}
 	.mobile-nav-icon {
 		position: absolute;
-		top: 40px;
 		left: 85%;
 		display: none;
-		#nav-toggle {}
-		#nav-toggle span,
-		#nav-toggle span:before,
-		#nav-toggle span:after {
+		#nav-icon1 {
+			width: 60px;
+			height: 45px;
+			position: relative;
+			margin: 21px auto;
+			-webkit-transform: rotate(0deg);
+			-moz-transform: rotate(0deg);
+			-o-transform: rotate(0deg);
+			transform: rotate(0deg);
+			-webkit-transition: .5s ease-in-out;
+			-moz-transition: .5s ease-in-out;
+			-o-transition: .5s ease-in-out;
+			transition: .5s ease-in-out;
 			cursor: pointer;
-			border-radius: 1px;
-			height: 8px;
-			width: 55px;
-			background: $pastelBaseColor;
-			position: absolute;
+		}
+
+		#nav-icon1 span {
 			display: block;
-			content: '';
+			position: absolute;
+			height: 4px;
+			width: 100%;
+			background: white;
+			border-radius: 9px;
+			opacity: 1;
+			left: 0;
+			-webkit-transform: rotate(0deg);
+			-moz-transform: rotate(0deg);
+			-o-transform: rotate(0deg);
+			transform: rotate(0deg);
+			-webkit-transition: .25s ease-in-out;
+			-moz-transition: .25s ease-in-out;
+			-o-transition: .25s ease-in-out;
+			transition: .25s ease-in-out;
 		}
-		#nav-toggle span:before {
-			top: -15px;
+
+		#nav-icon1 span:nth-child(1) {
+			top: 0px;
 		}
-		#nav-toggle span:after {
-			bottom: -15px;
+
+		#nav-icon1 span:nth-child(2) {
+			top: 18px;
 		}
-		#nav-toggle span,
-		#nav-toggle span:before,
-		#nav-toggle span:after {
-			transition: all 500ms ease-in-out;
+
+		#nav-icon1 span:nth-child(3) {
+			top: 36px;
 		}
-		#nav-toggle.active span {
-			background-color: transparent;
+
+		#nav-icon1.open span:nth-child(1) {
+			top: 18px;
+			-webkit-transform: rotate(135deg);
+			-moz-transform: rotate(135deg);
+			-o-transform: rotate(135deg);
+			transform: rotate(135deg);
 		}
-		#nav-toggle.active span:before,
-		#nav-toggle.active span:after {
-			top: 0;
+
+		#nav-icon1.open span:nth-child(2) {
+			opacity: 0;
+			left: -60px;
 		}
-		#nav-toggle.active span:before {
-			transform: rotate(45deg);
-		}
-		#nav-toggle.active span:after {
-			transform: rotate(-45deg);
+
+		#nav-icon1.open span:nth-child(3) {
+			top: 18px;
+			-webkit-transform: rotate(-135deg);
+			-moz-transform: rotate(-135deg);
+			-o-transform: rotate(-135deg);
+			transform: rotate(-135deg);
 		}
 	}
 }
@@ -1600,7 +1629,6 @@ article {
 	}
 	p {
 		margin-top: 15px;
-		margin-top: 15px;
 		font-size: 1.3em;
 		font-family: "Josefin Sans", sans-serif;
 		font-weight: 400;
@@ -1609,37 +1637,70 @@ article {
 }
 
 //case_study 
+.case-study-page {
+	.banner {
+		width: 100%;
+		height: 300px;
+		background-position: 42% 23%;
+		position: relative;
+		background-size: cover;
+	}
+	.overlay {
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		background-color: black;
+		opacity: .7;
+	}
+
+	.text-container {
+		width: 100%;
+		text-align: center;
+		position: relative;
+		top: 52px;
+		max-width: 500px;
+		margin: 0 auto;
+	}
+
+
+	h1 {
+		margin: 0;
+
+		font-size: 6em;
+		line-height: 98px;
+		z-index: 999;
+		color: white;
+	}
+
+}
 
 .case-container {
-	padding: 20px;
+	padding: 1% 58px 6%;
+	padding-top: 1%;
 	background-color: $secondaryBlue;
 	overflow: hidden;
-	.image-container {
-		float: left;
-		max-width: 300px;
-		img {
-			width: 100%;
-		}
-	}
+	box-sizing: border-box;
+
 	.content-container {
-		float: left;
-		max-width: 600px;
-		h1 {
-			margin: 0;
-			font-size: 4em;
-			line-height: 48px;
-		}
-		
+		max-width: 900px;
+		margin: 0 auto;
 		p {
 			font-family: 'Josefin Sans', sans-serif;
 			font-size: 1.4em;
-			margin-bottom: 40px;
+			margin-bottom: 20px;
+			text-align: center;
 		}
-		
+
 		.cta-container {
 			clear: both;
+			position: relative;
+			top: 40px;
+			width: 100%;
+			text-align: center;
+			height: 68px;
+			margin-bottom: 20px;
 		}
-		
+
 		.cta-container a {
 			text-decoration: none;
 			padding: 12px 16px;
@@ -1647,24 +1708,46 @@ article {
 			color: $secondaryBlueDark;
 			font-size: 2em;
 			font-weight: bold;
+			transition: .2s;
+			display: inline-block;
+			&:hover {
+				background-color:  $secondaryBlueDark;
+				color: $yellow;
+			}
 		}
 	}
 }
 
 .case {
-	max-width: 1000px;
-	margin: 0 auto;
 	color: white;
-}
+	text-align: center;
+	img[src="img/"] {
+		display: none;
+	}
+
+} 
 
 .image-link img {
 
-	max-width: 200px;
+	max-width: 300px;
 	float: left;
 	overflow: hidden;
 	max-height: 200px;
 	margin-top: 10px;
 	margin-right: 10px;
 }
+
+.parent-container {
+	text-align: center;
+	width: 100%;
+	overflow: hidden;
+	a {
+		display: inline-block;
+	}
+}
+
+
+
+
 
 
