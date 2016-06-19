@@ -22,13 +22,14 @@ if (isset($_POST['login'])) {
     $db_user_lastname = $row['user_lastname'];
     $db_user_role = $row['role'];
   }
+	
+	$password = crypt($password, $db_password);
 
   if ($username !== $db_username && $password !== $db_password) {
 
     header("Location: ../index.php?login=failed");
     
   } else if ($username == $db_username && $password == $db_password) {
-		echo "SUCCESS";
     $_SESSION['username'] = $db_username;
     $_SESSION['firstname'] = $db_user_firstname;
     $_SESSION['lastname'] = $db_user_lastname;

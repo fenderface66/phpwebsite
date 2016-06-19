@@ -1,6 +1,3 @@
-
-
-
 <!--[if lt IE 8]>
 <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
 <![endif]-->
@@ -41,12 +38,12 @@
 			<h3>HTML</h3></div>
 		<div class="css slider slide-left" data-plugin-options='{"speed":1200, "distance":2000}'>
 			<h3>CSS</h3></div>
-		<div class="jquery slider slide-left" data-plugin-options='{"speed":1290, "distance":2000}'>
-			<h3>jQuery</h3></div>
 		<div class="javascript slider slide-left" data-plugin-options='{"speed":1200, "distance":2000}'>
 			<h3>Javascript</h3></div>
 		<div class="php slider slide-left" data-plugin-options='{"speed":1200, "distance":2000}'>
 			<h3>PHP</h3></div>
+			<div class="python slider slide-left" data-plugin-options='{"speed":1290, "distance":2000}'>
+			<h3>Python</h3></div>
 		<div class="chart-x"></div>
 		<div class="chart-y1 chart-y">
 			<h3 class="number">1</h3></div>
@@ -70,12 +67,18 @@
 		<div class="chart-x3"></div>
 		<div class="chart-x4"></div>
 		<div class="bar_container">
-			<div class="bar flash wow fadeInDown" data-wow-duration="3s"></div>
-			<h3 class="f-label label">flash</h3>
-			<div class="bar illustrator wow slideInDown" data-wow-duration="3s"></div>
-			<h3 class="i-label label">illustrator</h3>
-			<div class="bar photoshop wow fadeInDown" data-wow-duration="3s"></div>
-			<h3 class="p-label label">photoshop</h3>
+			<div class="bar flash wow fadeInDown" data-wow-duration="1.5s">
+				<h3 class="f-label label">flash</h3>
+			</div>
+			
+			<div class="bar illustrator wow slideInDown" data-wow-duration="1.5s">
+				<h3 class="i-label label">illustrator</h3>
+			</div>
+			
+			<div class="bar photoshop wow fadeInDown" data-wow-duration="1.5s">
+				<h3 class="p-label label">photoshop</h3>
+			</div>
+			
 		</div>
 		</div>
 </section>
@@ -90,30 +93,15 @@
 
 	<div class="board">
 
-		<i class="draggable player ion-android-walk desktop-walker"></i>
-
-
-
-
-
-
-
-
+		<div class="player-container">
+			<i class="draggable player ion-android-walk desktop-walker"></i>
+		</div>
 
 		<div class="square-piece piece-1  top-row droppable-go">
 			<h1 class="wow slideInDown go">GO</h1><i class="ion-ios-arrow-thin-right wow slideInDown"></i></div>
-
-
-
 		<div class="square-piece piece-2 even top-row droppable-home"><i class="even-icon ion-ios-home-outline wow slideInDown"></i></div>
-
-
 		<div class="square-piece piece-3 top-row droppable-ed"><i class="ion-university wow slideInDown"></i></div>
-
-
 		<div class="square-piece piece-4 even top-row droppable-music"><i class="even-icon ion-ios-musical-notes wow slideInDown"></i></div>
-
-
 		<div class="square-piece piece-5 right-side droppable-psych"><i class="ion-ios-people-outline wow slideInRight"></i></div>
 		<div class="square-piece piece-6 even right-side droppable-code"><i class="even-icon ion-android-laptop wow slideInRight"></i></div>
 		<div class="square-piece piece-7 even bottom-row droppable-travel"><i class="even-icon ion-plane wow slideInUp"></i></div>

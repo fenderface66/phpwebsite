@@ -1,6 +1,3 @@
-
-
-
 <!--[if lt IE 8]>
 <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
 <![endif]-->
@@ -14,74 +11,94 @@
 	<div class="loader-section section-right"></div>
 
 </div>
+<?php session_start(); ?>
 <?php include "admin/db.php" ?>
 <!doctype html>
 <html class="no-js" lang="">
 
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>rglheygate</title>
-    <meta name="description" content="Robbie is a UX developer with deep interests for understanding the social-psychological roots of attractive and enticing web design/development.">
-    <meta name="keywords" content="UX, Developer, Web-design, Front-end, Heygate, Robbie">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href='http://fonts.googleapis.com/css?family=Josefin+Sans:400,700,100' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.googleapis.com/css?family=Amatic+SC:400,700' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/animate.css">
-    <link rel="stylesheet" href="css/tooltipster.css">
-    <link rel="stylesheet" href="css/magnific-popup.css">
-    <link rel="stylesheet" href="css/style.css">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<title>rglheygate</title>
+		<meta name="description" content="Robbie is a UX developer with deep interests for understanding the social-psychological roots of attractive and enticing web design/development.">
+		<meta name="keywords" content="UX, Developer, Web-design, Front-end, Heygate, Robbie">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link href='http://fonts.googleapis.com/css?family=Josefin+Sans:400,700,100' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Amatic+SC:400,700' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
+		<link rel="stylesheet" href="css/normalize.css">
+		<link rel="stylesheet" href="css/animate.css">
+		<link rel="stylesheet" href="css/tooltipster.css">
+		<link rel="stylesheet" href="css/magnific-popup.css">
+		<link rel="stylesheet" href="css/style.css">
 
-    <script src="js/vendor/modernizr-2.8.3.min.js"></script>
-    <script>
-        (function(i, s, o, g, r, a, m) {
-            i['GoogleAnalyticsObject'] = r;
-            i[r] = i[r] || function() {
-                (i[r].q = i[r].q || []).push(arguments)
-            }, i[r].l = 1 * new Date();
-            a = s.createElement(o),
-                m = s.getElementsByTagName(o)[0];
-            a.async = 1;
-            a.src = g;
-            m.parentNode.insertBefore(a, m)
-        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+		<script src="js/vendor/modernizr-2.8.3.min.js"></script>
+		<script>
+			(function(i, s, o, g, r, a, m) {
+				i['GoogleAnalyticsObject'] = r;
+				i[r] = i[r] || function() {
+					(i[r].q = i[r].q || []).push(arguments)
+				}, i[r].l = 1 * new Date();
+				a = s.createElement(o),
+					m = s.getElementsByTagName(o)[0];
+				a.async = 1;
+				a.src = g;
+				m.parentNode.insertBefore(a, m)
+			})(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
 
-        ga('create', 'UA-68464561-1', 'auto');
-        ga('send', 'pageview');
-    </script>
-</head>
+			ga('create', 'UA-68464561-1', 'auto');
+			ga('send', 'pageview');
+		</script>
+	</head>
 
-<body>
-<header><nav id="primary_nav">
+	<body>
+	<?php 
+		if (isset($_SESSION['role']) && $_SESSION['role'] == 'Admin') {
+			echo 
+				"<div class='cms-bar'>
+					<p>Hello {$_SESSION['username']}</p>
+					<ul>
+						<li><a href='/admin'>Admin</a></li>
+						<li><a href='/admin/case_studies.php?source=add_case'>Add Case Study</a></li>
+						<li><a href='/admin/includes/logout.php'>Logout</a></li>
+					</ul>
+				</div>";	
+		}
+		
+	?>
+		<header><nav id="primary_nav">
 
-    <a href="index.php"><img src="img/logo-white.png"></a>
+			<a href="index.php"><img src="img/logo-white.png"></a>
 
-    <ul class="nav">
+			<ul class="nav">
 
-        <!--        <li class="navbar hvr-underline-from-center"><a class="navLink" href="#">Portfolio</a></li>-->
+				<!--        <li class="navbar hvr-underline-from-center"><a class="navLink" href="#">Portfolio</a></li>-->
 
-        <li class="navbar hvr-underline-from-center"><a class="navLink" data-dom-cache=false href="about.php">About</a></li>
-        <li class="navbar hvr-underline-from-center"><a class="navLink" data-dom-cache=false href="portfolio.php">Portfolio</a></li>
-
-        <li class="navbar hvr-underline-from-center"><a class="navLink" data-dom-cache=false href="http://www.rglheygate.com/RobsBlog/">Blog</a></li>
-
-        <li class="navbar hvr-underline-from-center"><a class="navLink" data-dom-cache=false href="contactform.php">Contact</a></li>
-        <div class="arrow_box">
-            <p>Dont Forget to </p>
-            <p>Get In Touch</p>
-        </div>
-    </ul>
-
+				<li class="navbar hvr-underline-from-center"><a class="navLink" data-dom-cache=false href="about.php">About</a></li>
+				<li class="navbar hvr-underline-from-center"><a class="navLink" data-dom-cache=false href="portfolio.php">Portfolio</a></li>
+				<li class="navbar hvr-underline-from-center"><a class="navLink" data-dom-cache=false href="contactform.php">Contact</a></li>
+				<div class="arrow_box">
+					<p>Dont Forget to </p>
+					<p>Get In Touch</p>
+				</div>
+			</ul>
+			
+			
 
 
-    <div class="mobile-nav-icon"><a id="nav-toggle" href="#"><span></span></a></div>
+
+			<div class="mobile-nav-icon">
+				<div id="nav-icon1">
+					<span></span>
+					<span></span>
+					<span></span>
+				</div>
+			</div>
 
 
-</nav>
-</header>
-<div class="clear"></div>
+			</nav>
+		</header>
+		<div class="clear"></div>
 
 
 
@@ -109,12 +126,12 @@
 			<h3>HTML</h3></div>
 		<div class="css slider slide-left" data-plugin-options='{"speed":1200, "distance":2000}'>
 			<h3>CSS</h3></div>
-		<div class="jquery slider slide-left" data-plugin-options='{"speed":1290, "distance":2000}'>
-			<h3>jQuery</h3></div>
 		<div class="javascript slider slide-left" data-plugin-options='{"speed":1200, "distance":2000}'>
 			<h3>Javascript</h3></div>
 		<div class="php slider slide-left" data-plugin-options='{"speed":1200, "distance":2000}'>
 			<h3>PHP</h3></div>
+			<div class="python slider slide-left" data-plugin-options='{"speed":1290, "distance":2000}'>
+			<h3>Python</h3></div>
 		<div class="chart-x"></div>
 		<div class="chart-y1 chart-y">
 			<h3 class="number">1</h3></div>
@@ -138,12 +155,18 @@
 		<div class="chart-x3"></div>
 		<div class="chart-x4"></div>
 		<div class="bar_container">
-			<div class="bar flash wow fadeInDown" data-wow-duration="3s"></div>
-			<h3 class="f-label label">flash</h3>
-			<div class="bar illustrator wow slideInDown" data-wow-duration="3s"></div>
-			<h3 class="i-label label">illustrator</h3>
-			<div class="bar photoshop wow fadeInDown" data-wow-duration="3s"></div>
-			<h3 class="p-label label">photoshop</h3>
+			<div class="bar flash wow fadeInDown" data-wow-duration="1.5s">
+				<h3 class="f-label label">flash</h3>
+			</div>
+			
+			<div class="bar illustrator wow slideInDown" data-wow-duration="1.5s">
+				<h3 class="i-label label">illustrator</h3>
+			</div>
+			
+			<div class="bar photoshop wow fadeInDown" data-wow-duration="1.5s">
+				<h3 class="p-label label">photoshop</h3>
+			</div>
+			
 		</div>
 		</div>
 </section>
@@ -158,30 +181,15 @@
 
 	<div class="board">
 
-		<i class="draggable player ion-android-walk desktop-walker"></i>
-
-
-
-
-
-
-
-
+		<div class="player-container">
+			<i class="draggable player ion-android-walk desktop-walker"></i>
+		</div>
 
 		<div class="square-piece piece-1  top-row droppable-go">
 			<h1 class="wow slideInDown go">GO</h1><i class="ion-ios-arrow-thin-right wow slideInDown"></i></div>
-
-
-
 		<div class="square-piece piece-2 even top-row droppable-home"><i class="even-icon ion-ios-home-outline wow slideInDown"></i></div>
-
-
 		<div class="square-piece piece-3 top-row droppable-ed"><i class="ion-university wow slideInDown"></i></div>
-
-
 		<div class="square-piece piece-4 even top-row droppable-music"><i class="even-icon ion-ios-musical-notes wow slideInDown"></i></div>
-
-
 		<div class="square-piece piece-5 right-side droppable-psych"><i class="ion-ios-people-outline wow slideInRight"></i></div>
 		<div class="square-piece piece-6 even right-side droppable-code"><i class="even-icon ion-android-laptop wow slideInRight"></i></div>
 		<div class="square-piece piece-7 even bottom-row droppable-travel"><i class="even-icon ion-plane wow slideInUp"></i></div>
@@ -286,5 +294,4 @@
 </body>
 
 </html>
-
 

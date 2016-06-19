@@ -4,6 +4,7 @@
       <th>Id</th>
       <th>Name</th>
       <th>Client</th>
+      <th>Case Blurb</th>
       <th>Description</th>
       <th>Case Link</th>
       <th>Image One</th>

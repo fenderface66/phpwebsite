@@ -6,8 +6,6 @@
       <th>Password</th>
       <th>Firstname</th>
       <th>Lastname</th>
-      <th>Image</th>
-      <th>Email</th>
       <th>Role</th>
     </tr>
   </thead>

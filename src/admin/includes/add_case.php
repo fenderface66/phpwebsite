@@ -11,13 +11,18 @@
 		<input name="case_client" class="form-control" type="text">
 	</div>
 	<div class="form-group">
+		<label for="case_blurb">Case Blurb</label>
+		<textarea name="case_blurb" rows="10" class="form-control" type="text">
+		</textarea>
+	</div>
+	<div class="form-group">
 		<label for="case_description">Case Description</label>
 		<textarea name="case_description" rows="10" class="form-control" type="text"></textarea>
 	</div>
 	<div class="form-group">
 		<label for="case_link">Case Link</label>
 		<input name="case_link" class="form-control" type="text">
-	</div>
+	</div> 
 	<div class="form-group">
 		<label for="case_image_one">Background Image</label>
 		<input name="case_image_one" class="form-control" type="file">
@@ -34,7 +39,7 @@
 		<label for="case_image_Four">Post Image Four</label>
 		<input name="case_image_Four" class="form-control" type="file">
 	</div>
-	
+
 	<div class="form-group">
 		<input type="submit" class="btn btn-primary" name="create_case" value="Publish Post">
 	</div>

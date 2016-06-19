@@ -20,6 +20,7 @@
 	while ($row = mysqli_fetch_assoc($case_query)) {
 		$case_name = $row['case_name']; 
 		$case_client = $row['case_client']; 
+		$case_blurb = $row['case_blurb']; 
 		$case_description = $row['case_description']; 
 		$case_link = $row['case_link']; 
 		$case_image_one = $row['case_image_one']; 
@@ -41,28 +42,38 @@
 	<div class="case-container span_12_of_12">
 		<div class="case">
 			<div class="content-container">
-
-				<p><?php echo $case_description ?></p>
-
-				<div class="parent-container">
-					<a href="img/<?php echo $case_image_two ?>" class="image-link">
-						<img src="img/<?php echo $case_image_two ?>" />
-					</a>
-					<a href="img/<?php echo $case_image_three ?>" class="image-link">
-						<img src="img/<?php echo $case_image_three ?>" />
-					</a>
-					<a href="img/<?php echo $case_image_four ?>" class="image-link">
-						<img src="img/<?php echo $case_image_four ?>" />
-					</a>
-					<a href="img/<?php echo $case_image_five ?>" class="image-link">
-						<img src="img/<?php echo $case_image_five ?>" />
-					</a>
-					<a href="img/<?php echo $case_image_six ?>" class="image-link">
-						<img src="img/<?php echo $case_image_six ?>" />
-					</a>
+				<div class="des-container">
+					<p><?php echo $case_description ?></p>
+				</div>
+				<div class="scroll-container">
+					<div class="parent-container">
+						<div class="scroll-message">
+							<p>Scroll through pages</p>
+						</div>
+						<a href="img/<?php echo $case_image_two ?>" class="image-link">
+							<img src="img/<?php echo $case_image_two ?>" />
+						</a>
+		
+						<a href="img/<?php echo $case_image_three ?>" class="image-link">
+							<img src="img/<?php echo $case_image_three ?>" />
+						</a>
+	
+						<a href="img/<?php echo $case_image_four ?>" class="image-link">
+							<img src="img/<?php echo $case_image_four ?>" />
+						</a>
+		
+						<a href="img/<?php echo $case_image_five ?>" class="image-link">
+							<img src="img/<?php echo $case_image_five ?>" />
+						</a>
+				
+						<a href="img/<?php echo $case_image_six ?>" class="image-link">
+							<img src="img/<?php echo $case_image_six ?>" />
+						</a>
+						
+					</div>
 				</div>
 				<div class="cta-container">
-					<a class="case-cta" href="<?php echo $case_link ?>">See for your self</a>
+					<a class="case-cta" target="_blank" href="<?php echo $case_link ?>">See for your self</a>
 				</div>
 
 			</div>

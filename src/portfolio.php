@@ -26,6 +26,7 @@
 					$case_id = $row['case_id']; 
 					$case_name = $row['case_name']; 
 					$case_client = $row['case_client']; 
+					$case_blurb = $row['case_blurb']; 
 					$case_description = $row['case_description']; 
 					$case_link = $row['case_link']; 
 					$case_image_one = $row['case_image_one']; 
@@ -60,12 +61,11 @@
 				?>
 				<div class="col span_4_of_12   card-container <?php echo $case_client; ?> index-<?php echo $case_id; ?> <?php echo $case_position ?>">
 				<a href="casestudy.php?c_id=<?php echo $case_id ?>">
-					<div class="card <?php echo $case_color; ?> <?php echo $case_client; ?>-card front">
-						<img src="img/<?php echo $case_image_one ?>" alt="">
+					<div style="background-image : url('img/<?php echo $case_image_one ?>')" class="card <?php echo $case_color; ?> <?php echo $case_client; ?>-card front">
 						<div class="overlay"></div>
 						<div class="info-container">
 							<h3><?php echo $case_name ?></h3>
-							<p><?php echo $case_description ?></p>
+							<p><?php echo $case_blurb ?></p>
 
 						</div>
 					</div>

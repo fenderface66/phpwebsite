@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <?php include "admin/db.php" ?>
 <!doctype html>
 <html class="no-js" lang="">
@@ -38,6 +39,20 @@
 	</head>
 
 	<body>
+	<?php 
+		if (isset($_SESSION['role']) && $_SESSION['role'] == 'Admin') {
+			echo 
+				"<div class='cms-bar'>
+					<p>Hello {$_SESSION['username']}</p>
+					<ul>
+						<li><a href='/admin'>Admin</a></li>
+						<li><a href='/admin/case_studies.php?source=add_case'>Add Case Study</a></li>
+						<li><a href='/admin/includes/logout.php'>Logout</a></li>
+					</ul>
+				</div>";	
+		}
+		
+	?>
 		<header><nav id="primary_nav">
 
 			<a href="index.php"><img src="img/logo-white.png"></a>
@@ -48,15 +63,14 @@
 
 				<li class="navbar hvr-underline-from-center"><a class="navLink" data-dom-cache=false href="about.php">About</a></li>
 				<li class="navbar hvr-underline-from-center"><a class="navLink" data-dom-cache=false href="portfolio.php">Portfolio</a></li>
-
-				<li class="navbar hvr-underline-from-center"><a class="navLink" data-dom-cache=false href="http://www.rglheygate.com/RobsBlog/">Blog</a></li>
-
 				<li class="navbar hvr-underline-from-center"><a class="navLink" data-dom-cache=false href="contactform.php">Contact</a></li>
 				<div class="arrow_box">
 					<p>Dont Forget to </p>
 					<p>Get In Touch</p>
 				</div>
 			</ul>
+			
+			
 
 
 

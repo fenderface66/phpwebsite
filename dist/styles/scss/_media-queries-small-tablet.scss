@@ -1,192 +1,191 @@
 @media only screen and (max-width: 767px) {
-  .hvr-underline-from-center:before {
-    background: $secondaryYellow;
-  }
-  nav {
-    height: 85px;
-    ul {
-      background-color: $baseColor;
-      width: 100%;
-      align-content: center;
-      display: none;
-      padding-left: 0;
-      margin-left: 0;
-      margin-right: 0;
-      left: 0;
-      top: 18px;
-      li:first-child {
-        margin: 0;
-      }
-      li {
-        top: 0;
-        position: relative;
-        padding: 0;
-        width: 100%;
-        z-index: 999;
-        background-color: $baseColor;
-        border-top: 2px solid $pastelBaseColor;
-        line-height: 75px;
-        a {
-          z-index: 999;
-        }
-      }
-    }
-    .mobile-nav-icon {
-      display: block;
-    }
-  }
-  .arrow_box {
-    display: none !important;
-  }
-  .section_2 {
-    .language {
-      .number {
-        font-size: 3em;
-        bottom: 80%;
-      }
-    }
-  }
-  .section_3 {
-    h1 {
-      font-size: 3.4em;
-    }
-    .bar_container {
-      h3 {
-        font-size: 2em;
-      }
-      .bar {
-        width: 45px;
-      }
-      .i-label {
-        left: 36%;
-      }
-      .f-label {
-        left: 16%;
-      }
-      .p-label {
-        left: 62%;
-      }
-      .flash {
-        left: 18%;
-      }
-      .illustrator {
-        left: 43%;
-      }
-      .photoshop {
-        left: 68%;
-      }
-    }
-  }
-  .section_4 {
-    .drag-me {
-      font-size: 1.5em;
-      top: 10.4%;
-      left: 69%;
-    }
-    .answer {
-      h2 {
-        top: 80%;
-        font-size: 1em;
-      }
-    }
-    .board {
-      h1 {
-        font-size: 3em;
-      }
-      .lets-play {
-        font-size: 2.4em;
-        top: 46%;
-      }
-      h2 {
-        font-size: 1.2em;
-        top: 74%;
-      }
-      .piece-1 {
-        i {
-          top: 70%;
-        }
-      }
-      .square-piece {
-        i {
-          font-size: 4.8em;
-          top: 20%;
-        }
-        .ion-ios-arrow-thin-right {
-          top: 40%;
-        }
-        h1 {
-          font-size: 1.8em;
-        }
-        .go {
-          font-size: 3em;
-        }
-        h2 {
-          font-size: 1.8em;
-        }
-      }
-      .piece-11 {
-        h1 {
-          font-size: 5.8em;
-        }
-      }
-    }
-  }
-  .contact-main {
-    height: 1200px;
-    form {
-      width: 400px;
-    }
-    .details {
-      width: 50%;
-    }
-    .social-circles {
-      >div {
-        width: 120px;
-        height: 120px;
-        line-height: 145px;
-      }
-    }
-  }
-  //About Page
-  .side-title {
-    line-height: 57px;
-    padding-top: 15px;
-  }
-  #userExperience {
-    top: 1145px;
-  }
-  #ux {
-    top: 802px;
-  }
-  #bg1-4 {
-    top: 825px;
-  }
-  //Portfolio Page
-  .portfolio-wrapper {
-    .active-stack-container {
-      width: 700px;
-    }
-    .back-active {
-      width: 700px;
-      height: 414px;
-    }
-    .back iframe {
-      height: 667px;
-      border-radius: 10px;
-      border: 0;
-      -ms-zoom: 0.62;
-      -moz-transform: scale(0.62);
-      -moz-transform-origin: 0 0;
-      -o-transform: scale(0.6);
-      -o-transform-origin: 0 0;
-      -webkit-transform: scale(0.62);
-      -webkit-transform-origin: 0 0;
-    }
-    .active-stack-container {
-      height: 510px;
-    }
-    .back .active-frame {
-      width: 1129px;
-    }
-  }
+	.hvr-underline-from-center:before {
+		background: $secondaryYellow;
+	}
+	nav {
+		height: 85px;
+		ul {
+			background-color: $baseColor;
+			width: 100%;
+			align-content: center;
+			display: none;
+			padding-left: 0;
+			margin-left: 0;
+			margin-right: 0;
+			left: 0;
+			top: 18px;
+			li:first-child {
+				margin: 0;
+			}
+			li {
+				top: 0;
+				position: relative;
+				padding: 0;
+				width: 100%;
+				z-index: 999;
+				background-color: $baseColor;
+				border-top: 2px solid $pastelBaseColor;
+				line-height: 75px;
+				a {
+					z-index: 999;
+				}
+			}
+		}
+		.mobile-nav-icon {
+			display: block;
+		}
+	}
+	.arrow_box {
+		display: none !important;
+	}
+	.section_2 {
+		.language {
+			.number {
+				font-size: 3em;
+				bottom: 80%;
+			}
+		}
+	}
+	.section_3 {
+		h1 {
+			font-size: 3.4em;
+		}
+		.bar_container {
+			h3 {
+				font-size: 2em;
+			}
+			.bar {
+				width: 45px;
+			}
+			.flash {
+				left: 18%;
+			}
+			.illustrator {
+				left: 43%;
+			}
+			.photoshop {
+				left: 68%;
+			}
+		}
+	}
+	.section_4 {
+		.drag-me {
+			font-size: 1.5em;
+			top: 96px;
+			left: 65%;
+		}
+		.answer {
+			h2 {
+				top: 80%;
+				font-size: 1em;
+			}
+		}
+		.board {
+			h1 {
+				font-size: 3em;
+			}
+			.lets-play {
+				font-size: 2.4em;
+				top: 46%;
+			}
+			h2 {
+				font-size: 1.2em;
+				top: 74%;
+			}
+			.piece-1 {
+				i {
+					top: 70%;
+				}
+			}
+			.square-piece {
+				i {
+					font-size: 4.8em;
+					padding: 35px;
+				}
+				.ion-ios-arrow-thin-right {
+					top: 18%;
+				}
+				h1 {
+					font-size: 1.8em;
+				}
+				.go {
+					font-size: 3em;
+					top: 25%;
+
+				}
+				h2 {
+					font-size: 1.8em;
+				}
+			}
+			.piece-11 {
+				h1 {
+					font-size: 5.8em;
+					padding: 22px 0px;
+				}
+			}
+		}
+	}
+	.contact-main {
+		height: 1200px;
+		form {
+			width: 400px;
+		}
+		.details {
+			width: 50%;
+		}
+		.social-circles {
+			>div {
+				width: 120px;
+				height: 120px;
+				line-height: 145px;
+				a {
+					font-size: 5em;
+					position: relative;
+					bottom: 10px;
+				}
+			}
+		}
+	}
+	//About Page
+	.side-title {
+		line-height: 57px;
+		padding-top: 15px;
+	}
+	#userExperience {
+		top: 1145px;
+	}
+	#ux {
+		top: 802px;
+	}
+	#bg1-4 {
+		top: 825px;
+	}
+	//Portfolio Page
+	.portfolio-wrapper {
+		.active-stack-container {
+			width: 700px;
+		}
+		.back-active {
+			width: 700px;
+			height: 414px;
+		}
+		.back iframe {
+			height: 667px;
+			border-radius: 10px;
+			border: 0;
+			-ms-zoom: 0.62;
+			-moz-transform: scale(0.62);
+			-moz-transform-origin: 0 0;
+			-o-transform: scale(0.6);
+			-o-transform-origin: 0 0;
+			-webkit-transform: scale(0.62);
+			-webkit-transform-origin: 0 0;
+		}
+		.active-stack-container {
+			height: 510px;
+		}
+		.back .active-frame {
+			width: 1129px;
+		}
+	}
 }

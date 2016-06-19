@@ -14,7 +14,13 @@ while($row = mysqli_fetch_assoc($select_cases_by_id)) {
 	$case_id = $row['case_id']; 
 	$case_name = $row['case_name']; 
 	$case_client = $row['case_client']; 
+	
+	$case_blurb = $row['case_blurb'];
+	$case_blurb = mysqli_real_escape_string($connection, $case_blurb);
+	
 	$case_description = $row['case_description']; 
+	$case_description = mysqli_real_escape_string($connection, $case_description);
+	
 	$case_link = $row['case_link'];
 	$case_image_one = $row['case_image_one']; 
 	$case_image_two = $row['case_image_two']; 
@@ -29,7 +35,10 @@ while($row = mysqli_fetch_assoc($select_cases_by_id)) {
 if (isset($_POST['edit_case'])) {
 	$case_name = $_POST['case_name'];
 	$case_client = $_POST['case_client'];
-	$case_description = mysqli_escape_string($connection, $_POST['case_description']);
+	
+	$case_blurb = $_POST['case_blurb'];
+	
+	
 	$case_link = $_POST['case_link'];
 
 	$case_image_one = $_FILES['case_image_one']['name'];
@@ -115,6 +124,7 @@ if (isset($_POST['edit_case'])) {
 	$query = "UPDATE case_studies SET ";
 	$query .= "case_name = '{$case_name}', ";
 	$query .= "case_client = '{$case_client}', " ;
+	$query .= "case_blurb = '{$case_blurb}', " ;
 	$query .= "case_link = '{$case_link}', ";
 	$query .= "case_description = '{$case_description}', ";
 	$query .= "case_image_one = '{$case_image_one}', ";
@@ -124,9 +134,10 @@ if (isset($_POST['edit_case'])) {
 	$query .= "case_image_five = '{$case_image_five}', ";
 	$query .= "case_image_six = '{$case_image_six}' ";
 	$query .= "WHERE case_id = {$case_id} ";
-
+	echo $query;
 	$edit_case_query = mysqli_query($connection, $query);
 	confirm($edit_case_query);
+	
 	header("Location: ./case_studies.php?source=view_all_cases");
 } 
 
@@ -141,6 +152,12 @@ if (isset($_POST['edit_case'])) {
 	<div class="form-group">
 		<label for="case_client">Case Client</label>
 		<input value="<?php echo $case_client; ?>" name="case_client" class="form-control" type="text">
+	</div>
+	<div class="form-group">
+		<label for="case_blurb">Case Blurb</label>
+		<textarea name="case_blurb" rows="10" class="form-control" type="text">
+			<?php echo $case_blurb; ?>
+		</textarea>
 	</div>
 	<div class="form-group">
 		<label for="case_description">Case Description</label>
