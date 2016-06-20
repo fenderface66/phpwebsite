@@ -29,7 +29,7 @@ while($row = mysqli_fetch_assoc($select_cases_by_id)) {
 	$case_image_five = $row['case_image_five']; 
 	$case_image_six = $row['case_image_six']; 
 
-
+ 
 }
 
 if (isset($_POST['edit_case'])) {
@@ -37,7 +37,10 @@ if (isset($_POST['edit_case'])) {
 	$case_client = $_POST['case_client'];
 	
 	$case_blurb = $_POST['case_blurb'];
+	$case_blurb = mysqli_real_escape_string($connection, $case_blurb);
 	
+	$case_description = $_POST['case_description'];
+	$case_description = mysqli_real_escape_string($connection, $case_description);
 	
 	$case_link = $_POST['case_link'];
 
@@ -96,7 +99,7 @@ if (isset($_POST['edit_case'])) {
 		while ($row = mysqli_fetch_array($select_image)) {
 			$case_image_four = $row['case_image_four'];    
 		}
-
+ 
 
 	} 
 
@@ -106,7 +109,6 @@ if (isset($_POST['edit_case'])) {
 		while ($row = mysqli_fetch_array($select_image)) {
 			$case_image_five = $row['case_image_five'];    
 		}
-
 	} 
 
 	if (empty($case_image_six)) {
