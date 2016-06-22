@@ -16,10 +16,8 @@ while($row = mysqli_fetch_assoc($select_cases_by_id)) {
 	$case_client = $row['case_client']; 
 	
 	$case_blurb = $row['case_blurb'];
-	$case_blurb = mysqli_real_escape_string($connection, $case_blurb);
 	
 	$case_description = $row['case_description']; 
-	$case_description = mysqli_real_escape_string($connection, $case_description);
 	
 	$case_link = $row['case_link'];
 	$case_image_one = $row['case_image_one']; 

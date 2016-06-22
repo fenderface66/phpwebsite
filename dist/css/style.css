@@ -14247,35 +14247,6 @@ body {
   width: 6.866%;
 }
 
-@media only screen and (min-width: 1520px) {
-  .section_4 .board .piece-1 h1 {
-    top: 40px;
-  }
-
-  .section_4 {
-    height: 1000px;
-  }
-
-  .section_4 .board {
-    height: 720px;
-  }
-
-  .section_4 .answer {
-    height: 360px;
-  }
-
-  .section_4 .board .square-piece i {
-    padding: 37px 0px;
-  }
-
-  .section_4 .board .piece-11 h1 {
-    top: 13px;
-  }
-
-  .section_4 .board .lets-play {
-    top: 57%;
-  }
-}
 @media only screen and (max-width: 1023px) {
   nav ul {
     display: block;
